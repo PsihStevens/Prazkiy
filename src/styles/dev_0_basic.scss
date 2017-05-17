@@ -2,7 +2,7 @@
 *,*:before, *:after{box-sizing:border-box;outline:none;}
 *,body,html{-webkit-text-size-adjust: none;-webkit-appearance: none;}
 html{height:100%;}
-body{min-height:100%;width:100%;min-width:320px;font-family:arial,sans-serif;background:#fff;color:#3d3d3d;position:relative;font-size: 16px;line-height: 1;}
+body{min-height:100%;width:100%;min-width:320px;font-family:'MyriadPro',arial,sans-serif;background:#fff;color:#3d3d3d;position:relative;font-size: 16px;line-height: 1;}
 img{vertical-align:bottom;border:0;max-width:100%;}
 
 /* helping adds*/
@@ -46,6 +46,13 @@ input, textarea{
 }
 
 //  example->    @include font-face('PFDinTextPro', 'PFDinTextPro-Bold', 700, italic);
+
+@include font-face('Anglecia', 'AngleciaProDisplayRegular', 400);
+@include font-face('Anglecia', 'AngleciaProDisplayItalic', 400, italic);
+@include font-face('MyriadPro', 'MyriadPro-Regular', 400);
+
+@include font-face('MyriadPro', 'MyriadProSemi-Bold', 700);
+@include font-face('Anglecia', 'AngleciaProDisplayBold', 700);
 
 /*/fonts*/
 
