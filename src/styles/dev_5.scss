@@ -9,10 +9,129 @@
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
+
+// header
 header{
     width: 100%;
     height: 140px;
-    position: fixed;
+    position: absolute;
     top: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    z-index: 5;
+
+    .menu-box{
+        max-width: 1920px;
+        width: 100%;
+        height: 140px;
+        margin: 0 auto;
+        background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
 }
+.second-menu-box{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+    background-color: rgba(21, 21, 20, 0.9);
+    display: none;
+
+    // .mbox2{
+    //     height: 100%;
+    // }
+    // .img-box{
+    //     align-items: center;
+    // }
+}
+header,
+.second-menu-box{
+    
+    .mbox2{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .img-box{
+        width: 100%;
+        max-width: 190px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-menu{
+        width: 100%;
+        // max-width: 585px;
+        padding-left: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a{
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            transition: all 300ms ease;
+
+            &:hover{
+                color: #b08f6e;
+            }
+        }
+    }
+    .tel-box{
+        width: 100%;
+        max-width: 330px;
+        // text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 18px;
+    }
+    .tel{
+        color: white;
+        font-family: 'Anglecia';
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    .button-call{
+        background-color: #b08f6e;
+        border-radius: 3px;
+        box-shadow: 1px 1.7px 5px rgba(59, 28, 10, 0.35);
+        text-shadow: 1px 1.7px 5px rgba(96, 55, 19, 0.35);
+        color: #fefefe;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 8px 36px;
+        transition: all 300ms ease;
+
+        &:hover{
+            background-color: #735d47;
+        }
+    }
+}
+
+// header end
+
+// section 1
+
+.section-1{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    .content-box{
+        max-width: 1920px;
+        width: 100%;
+        height: 800px;
+        margin: 0 auto;
+        position: relative;
+        background: url('../images/slide-1.jpg') no-repeat;
+        background-size: cover; 
+        
+    }
+    
+}
+
+// section 1 end
