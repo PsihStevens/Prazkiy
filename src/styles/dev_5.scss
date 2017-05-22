@@ -16,6 +16,9 @@ a{
 li{
     list-style: none;
 }
+button{
+    outline: none;
+}
 .owl-carousel{
     .owl-prev{        
         border-top: solid 4px #b08f6e;
@@ -42,6 +45,9 @@ li{
 }
 .form_row.error{
     border: 2px solid rgba(255, 0, 0, 1)!important;
+}
+.mobile{
+    display: none;
 }
 
 // header
@@ -1038,3 +1044,158 @@ footer{
 }
 
 // section 12 end
+
+// hidden block
+#call_success{
+    width: 100%;
+    max-width: 885px;
+    border: 2px solid #847f7b;
+    padding: 110px 30px 110px;
+    background: url('../images/popUp-bg.jpg') top center no-repeat;
+    color: white;
+    background-size: cover;
+    text-align: center;
+
+    .call-success-title{
+        font-weight: 400;
+        font-size: 44px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+    .call-success-subtitle{
+        font-size: 28px;
+    }
+    button{
+        outline: none;
+    }
+}
+#call-popup{
+    width: 100%;
+    max-width: 885px;
+    border: 2px solid #847f7b;
+    padding: 24px 24px 107px;
+    background: url('../images/popUp-bg.jpg') top center no-repeat;
+    background-size: cover;
+
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input{
+            width: 255px;
+            height: 40px;
+            background-color: white;
+            border: 1px solid #a29f9c;
+            border-radius: 3px;
+            box-shadow: 1px 1.7px 5px rgba(59, 28, 10, 0.35);
+            text-align: center;
+            color: #736852;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        button{
+            width: 255px;
+            height: 40px;
+            background-color: #b08f6e;
+            border-radius: 3px;
+            border: none;
+            box-shadow: 1px 1.7px 5px rgba(56, 28, 27, 0.35);
+            text-shadow: 1px 1.7px 5px rgba(96, 55, 19, 0.35);
+            color: #fefefe;
+            font-size: 22px;
+            transition: all 300ms ease;
+
+            &:hover{
+                background-color: #735d47;
+            }
+        }
+    }
+    .contact-form-title{
+        max-width: 330px;
+        text-align: center;
+        color: white;
+        padding-top: 100px;
+        margin-bottom: 35px;      
+    }
+    .form_row{
+        border-radius: 3px;
+        border: 2px solid rgba(255, 0, 0, 0);
+        margin-bottom: 10px;
+    }
+    h2{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    p{
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
+
+.modal_div {
+	width: 100%;
+    max-width: 1180px; 
+	max-height: 790px; /* Рaзмеры дoлжны быть фиксирoвaны */
+	background: url('../images/popUp-news.jpg')top center no-repeat;
+    background-size: cover;
+    position: relative;
+	// position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	// top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+	// left: 50%; /* пoлoвинa экрaнa слевa */
+	// margin-top: -150px;
+	// margin-left: -395px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 1000; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	padding: 50px;
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+.modal_div .modal_close {
+    width: 30px;
+    height: 30px;
+    font: 21px/1 Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #888;
+    font-weight: 300;
+    text-align: center;
+    border-radius: 50%;
+    // border-width: 0;
+    border: 1px solid #888;
+    background: #fff;
+    transition: background .2s;
+    box-sizing: border-box;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+    transition: all 300ms ease;
+
+    &:hover{
+        color: #555;
+        background: #eee;
+    }
+}
+/* Пoдлoжкa */
+#overlay {
+	z-index: 105;
+	position:fixed; /* всегдa перекрывaет весь сaйт */
+	background-color:rgba(0,0,0,.8);
+	width:100%; 
+	height:100%;
+    padding: 0 15px;
+    top:0;
+    left:0;
+	display:none;
+    justify-content: center;
+    align-items: center;
+}
+.noneScroll {
+    // position:fixed; /*позицианируем чтобы исчез скролл*/
+    // width:100%; /*что бы верстка не складывалась по ширине*/
+    z-index: 1;
+    overflow: hidden;
+}
+
+// hidden block end

@@ -51,11 +51,41 @@ function hoverItem() {
     // });
 };
 
+
+function popUp() { 
+
+    var overlay = $('#overlay'); // пoдлoжкa, дoлжнa быть oднa нa стрaнице
+    var open_modal = $('.open_modal'); // все ссылки, кoтoрые будут oткрывaть oкнa
+    var close = $('.modal_close'); // все, чтo зaкрывaет мoдaльнoе oкнo, т.е. крестик и oверлэй-пoдлoжкa
+    var modal = $('.modal_div'); // все скрытые мoдaльные oкнa
+
+     open_modal.click( function(e){ // лoвим клик пo ссылке с клaссoм open_modal
+         e.preventDefault(); // вырубaем стaндaртнoе пoведение
+         var div = $(this).attr('href'); // вoзьмем стрoку с селектoрoм у кликнутoй ссылки
+         overlay.fadeIn(400, function(){ // пoсле oкoнчaния пoкaзывaния oверлэя
+                 $(div).css('display', 'block').animate({opacity: 1}, 200);
+                 $("html,body").addClass("noneScroll");
+
+         }).css('display', 'flex');
+     });
+
+     close.click( function(){ // лoвим клик пo крестику или oверлэю
+            modal.animate({opacity: 0}, 200, function(){ // пoсле этoгo
+                $(this).css('display', 'none');
+                $("html,body").removeClass("noneScroll");
+                overlay.fadeOut(400); // прячем пoдлoжку
+            });
+     });
+};
+
+
+
 $(document).ready(function(){
 
     owlCarousel();
     fixMenu();
     hoverItem();
+    popUp();
     $('.js_popup').fancybox();
     // $("a.js_popup").attr('rel', 'mySlideshows').fancybox();
 
@@ -127,6 +157,8 @@ $(document).ready(function(){
         // responsiveRefreshRate: 200,
         navText: ["",""]
     });
+
+
 
 });
 
