@@ -10,12 +10,53 @@
             <p>Залиште свої контакти і наш менеджер зв’яжеться з Вами</p>
         </div>
 
-        <form action="ajax.php" novalidate="novalidate" id="consultation-form">
-            <input type="text" class="el-input" name="name" required="required" aria-required="true" placeholder="Ваше Ім’я">
-            <input type="text" class="el-input" name="mail" required="required" aria-required="true" placeholder="Електронна адреса">
-            <input type="text" class="el-input" name="tel" required="required" aria-required="true" placeholder="Номер телефону">
-            <button type="submit">Відправити</button>
+        <!--<form action="ajax.php" novalidate="novalidate" class="consultation-form" id="consultation-form">
+
+            <input type="text" class="el-input" name="contact_name" required="required" aria-required="true" value="" placeholder="Ваше Ім’я">
+
+            <input type="text" class="el-input" name="contact_email"  aria-required="true" required="required" value="" placeholder="Електронна адреса">
+
+            <input type="text" id="tel" class="el-input tel-mask" name="contact_tel" required="required" aria-required="true" value="" placeholder="Номер телефону">
+
+            <input type="submit">Відправити</input>
+        </form>-->
+
+        <form action="ajax.php"  id="consultation-form" class="consultation-form contact-form">
+            <div class="contact-form-title">
+                <!-- Title -->
+            </div>
+            <div class="contact-form-row cfix">
+                <div class="contact-form-item">
+                    <div class="contact-form-item-input form_row">
+                        <!--<div class="form_input">-->
+                            <input type="text" name="contact_name" required="required" value="" placeholder="Ваше Ім’я">
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="contact-form-item">
+                    <div class="contact-form-item-input form_row">
+                        <!--<div class="form_input">-->
+                            <input type="text" name="contact_email" value="" required="required" placeholder="Електронна адреса">
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="contact-form-item">
+                    <div class="contact-form-item-input form_row">
+                        <!--<div class="form_input">-->
+                            <input type="text" name="contact_tel" value="" required="required" placeholder="Номер телефону" class="tel-mask">
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-row cfix">
+                <div class="contact-form-item">
+                    <button type="submit" class="contact-submit">
+                        <span> Отправить заявку  </span>
+                    </button>
+                </div>
+            </div>
         </form>
+
     </div>
 
 </section>

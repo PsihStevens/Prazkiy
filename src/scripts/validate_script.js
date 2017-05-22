@@ -225,7 +225,7 @@ function validationCallDocuments(form){
 */
 function Maskedinput(){
     if($('.tel-mask')){
-        $('.tel-mask').mask('+9 (999) 999-99-99 ');
+        $('.tel-mask').mask('+3 8(999) 999-99-99 ');
     }
 }
 
@@ -243,6 +243,11 @@ function fancyboxForm(){
 $(document).ready(function(){
 
    validate('#call-popup .contact-form', {submitFunction:validationCall});
+   validate('.consultation-form', {submitFunction:validationCall});
+   validate('.questions-form', {submitFunction:validationCall});
+   validate('.wishes-form', {submitFunction:validationCall});
+//    validationCallDocument('.consultation-form');
+//    popNext('#consultation-form', '#call_success');
    Maskedinput();
    fancyboxForm();
 

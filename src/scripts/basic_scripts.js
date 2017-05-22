@@ -62,11 +62,11 @@ function animationBlock(item){
 * GO TO href (smooth)
 */
 function goTo(){
-    $('.header-menu a').click(function(e){
+    $('.goTo').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         var target = $(href).offset().top-65;
-        $('body,html').animate({scrollTop:target},500);
+        $('body,html').animate({scrollTop:target},800);
     });
 }
 
@@ -131,6 +131,8 @@ function numberWithSpaces(x) {
 
 
 $(document).ready(function() {
+
+
 
     $('.footer_placeholder').height($('.footer').outerHeight());
 

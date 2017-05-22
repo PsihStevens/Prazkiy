@@ -50,8 +50,9 @@ input, textarea{
 @include font-face('Anglecia', 'AngleciaProDisplayRegular', 400);
 @include font-face('Anglecia', 'AngleciaProDisplayItalic', 400, italic);
 @include font-face('MyriadPro', 'MyriadPro-Regular', 400);
+@include font-face('MyriadPro', 'MyriadPro-It', 400, italic);
 
-@include font-face('MyriadPro', 'MyriadProSemi-Bold', 700);
+@include font-face('MyriadPro', 'MyriadPro-Bold', 700);
 @include font-face('Anglecia', 'AngleciaProDisplayBold', 700);
 
 /*/fonts*/
