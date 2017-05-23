@@ -92,6 +92,8 @@
 @media screen and (max-width: 990px){
 
     header{
+        height: 60px;
+
         .mobile{
             display: block
         }
@@ -246,13 +248,113 @@
     .section-1 .title{
         background-color: rgba(23, 25, 29, 0);
         border: none;
+        padding: 0;
+        margin-bottom: 50px;
+        width: 100%;
+
+        h1{
+            color: #736852;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p{
+            color: #736852;
+            font-size: 16px;
+
+            &:before{
+                width: 160px;
+                background-color: #736852;
+                top: -10px;
+                margin-left: -80px;
+            }
+        }
+    }
+    .section-1 .content-box{
+        padding: 100px 0 0;
+        background: #fff;
+    }
+    .section-1 .title-site-box{
+        padding-top: 10px;
+
+        .mobile{
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+    .section-1 .download-button{
+        margin: -130px 0 0 0;
+    }
+    .section-1 .slider-box{
+        background: url('../images/section-1-bg-mobile.jpg') top center no-repeat;
+        background-size: cover;
+        height: 350px;
+
+        #slider-header{
+            display: none;
+        }
+    }
+    .section-2{
+        padding: 40px 0 70px;
+    }
+    .section-2 .content-box{
+        max-width: 100%;
+        text-align: center;
+    }
+    .section-2 .button{
+        margin: 0 auto;
+    }
+    .section-2 .img-box{
+        display: none;
+    }
+    .section-8{
+        padding: 40px 0;
+
+        .title-box{
+           text-align: center; 
+        }
+        .list-box{
+            width: 100%;
+        }
+        ul{
+            width: 100%;
+        }
+        li{
+            text-align: center;
+
+            &:after{
+                width: 160px;
+                left: 50%;
+                margin-left: -12%;
+            }
+        }
+        .button{
+           display: block;
+           margin: 0 auto; 
+        }
+        .img-box{
+            display: none;
+        }
+    }
+    .section-10 .text p{
+        font-size: 12px!important;
+
+        span{
+            font-size: 24px!important;
+        }
+    }
+    
+}
+@media screen and (max-width: 600px){
+
+    .section-10 .news-item{
+        margin: 0 auto;
     }
 
 }
-@media screen and (max-width: 666px){
+@media screen and (max-width: 640px){
 
 }
-@media screen and (max-width: 479px){
+@media screen and (max-width: 480px){
 
 }
 @media screen and (max-width: 320px){
