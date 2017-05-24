@@ -32,7 +32,20 @@
     <!-- add you develop js here -->
 <!-- endbuild -->
 
-<script> 
+<script>
+
+    var coordinateMarkerY = 49.453268;
+    var coordinateMarkerX = 27.012750;
+    var mapCenterY = 49.452545;
+    var mapCenterX = 27.0107977;
+
+    if ($(window).width() < 600 ) {
+
+        coordinateMarkerY = mapCenterY;
+        coordinateMarkerX = mapCenterX;
+        console.log(coordinateMarkerY,coordinateMarkerX);
+    };
+
     google.maps.event.addDomListener(window, 'load', init);
     var map, markersArray = [];
 
@@ -146,7 +159,7 @@
 
     function init() {
         var mapOptions = {
-            center: new google.maps.LatLng(49.452545,27.0107977),
+            center: new google.maps.LatLng(mapCenterY,mapCenterX),
             zoom: 17,
             gestureHandling: 'auto',
             fullscreenControl: false,
@@ -163,7 +176,7 @@
         var mapElement = document.getElementById('myMap');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-            {"title":"вулиця Кармелюка, 8","address":"вулиця Кармелюка, 8, Хмельницький, Хмельницька область, Украина","desc":"","tel":"","int_tel":"","email":"","web":"","web_formatted":"","open":"","time":"","lat":49.453268,"lng":27.012750,"vicinity":"вулиця Кармелюка, 2, Хмельницький, Хмельницька область, Украина","open_hours":"","marker":{"url":"images/map-pin.png","scaledSize":{"width":128,"height":108,"j":"px","f":"px"},"origin":{"x":0,"y":0},"anchor":{"x":55,"y":75}},"iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}}
+            {"title":"вулиця Кармелюка, 8","address":"вулиця Кармелюка, 8, Хмельницький, Хмельницька область, Украина","desc":"","tel":"","int_tel":"","email":"","web":"","web_formatted":"","open":"","time":"","lat":coordinateMarkerY,"lng":coordinateMarkerX,"vicinity":"вулиця Кармелюка, 2, Хмельницький, Хмельницька область, Украина","open_hours":"","marker":{"url":"images/map-pin.png","scaledSize":{"width":128,"height":108,"j":"px","f":"px"},"origin":{"x":0,"y":0},"anchor":{"x":55,"y":75}},"iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}}
         ];
         for (i = 0; i < locations.length; i++) {
             marker = new google.maps.Marker({

@@ -1,5 +1,5 @@
 
-function owlCarousel() {  
+function owlCarousel() {
 
     $("#carusel-small").on("click", ".owl-item", function(event) {
 
@@ -10,7 +10,7 @@ function owlCarousel() {
         $('#carusel-full').trigger("to.owl.carousel", number);
     });
 
-    
+
 
 }
 
@@ -19,7 +19,7 @@ function fixMenu() {
     $(window).scroll(function(){
 
         if ($(window).scrollTop() > 300 ) {
-            
+
             $('#second-menu-box').slideDown("slow");
 
         } else {
@@ -41,18 +41,18 @@ function hoverItem() {
     });
 
     // $('#section-3 .item').hover(function(){
-            
+
     //     // $(this).closest('.office-box').find('.office-content-box .office-tab')
     //     $(this).find('.hiden-text').slideDown(300);
     // },
     // function(){
-        
+
     //     $(this).find('.hiden-text').slideUp(300);
     // });
 };
 
 
-function popUp() { 
+function popUp() {
 
     var overlay = $('#overlay'); // пoдлoжкa, дoлжнa быть oднa нa стрaнице
     var open_modal = $('.open_modal'); // все ссылки, кoтoрые будут oткрывaть oкнa
@@ -78,7 +78,23 @@ function popUp() {
      });
 };
 
+function menuUp() {
 
+    $('#header .burger-memu').on('click', function() {
+
+        $('#header .nav-menu').animate({right: 0}, 500);
+    });
+
+    $('#second-menu-box .burger-memu').on('click', function() {
+
+        $('#second-menu-box .nav-menu').animate({right: 0}, 500);
+    });
+
+    $('.close-button').on('click', function() {
+
+        $('.nav-menu').animate({right: '-100%'}, 500);
+    });
+};
 
 $(document).ready(function(){
 
@@ -86,6 +102,7 @@ $(document).ready(function(){
     fixMenu();
     hoverItem();
     popUp();
+    menuUp();
     $('.js_popup').fancybox();
     // $("a.js_popup").attr('rel', 'mySlideshows').fancybox();
 
@@ -114,6 +131,14 @@ $(document).ready(function(){
         // afterAction: syncPosition1,
         responsiveRefreshRate: 200,
         navText: ["",""],
+        responsive:{
+            0:{
+                nav:true
+            },
+            600:{
+                nav:false
+            }
+        },
     });
 
     $('#carusel-small').owlCarousel({
@@ -155,10 +180,18 @@ $(document).ready(function(){
         pagination: false,
         // afterAction: syncPosition1,
         // responsiveRefreshRate: 200,
-        navText: ["",""]
+        navText: ["",""],
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:false
+            }
+        },
     });
-
-
 
 });
 
