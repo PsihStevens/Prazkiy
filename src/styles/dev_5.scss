@@ -222,8 +222,29 @@ header,
         }
     }
     .close-button{
-        width: 10px;
-        height: 10px;
+        width: 25px;
+        height: 25px;
+        margin: 0 auto 10px;
+        position: relative;
+
+        .close-el{
+            position: absolute;
+            top: 0;
+            left: 12px;
+            width: 1px;
+            height: 100%;
+            background: #fff;
+        }
+        .el-1{
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .el-2{
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
     }
 }
 
@@ -739,7 +760,7 @@ header,
         margin-bottom: 40px;
 
         .owl-nav{
-            // display: block;
+            /* display: block;*/
 
             div{
                 position: absolute;
@@ -940,7 +961,7 @@ header,
                 height: 40px;
                 background: none;
                 padding: 0;
-                // top: 0;
+                /* top: 0;*/
                 bottom: 0;
                 margin: 0;
                 display: block;

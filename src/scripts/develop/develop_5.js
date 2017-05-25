@@ -78,7 +78,12 @@ function popUp() {
      });
 };
 
-function menuUp() {
+function mobMenuClose() {
+
+
+};
+
+function mobMenuUp() {
 
     $('#header .burger-memu').on('click', function() {
 
@@ -102,7 +107,7 @@ $(document).ready(function(){
     fixMenu();
     hoverItem();
     popUp();
-    menuUp();
+    mobMenuUp();
     $('.js_popup').fancybox();
     // $("a.js_popup").attr('rel', 'mySlideshows').fancybox();
 
