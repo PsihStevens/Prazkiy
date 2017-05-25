@@ -234,8 +234,12 @@
         margin-left: -190px;
     }
     .section-9 .carusel-doc .owl-nav .owl-prev{
-        left: -500px;
-        bottom: -195px;
+        left: -30px;
+        bottom: 40%;
+    }
+    .section-9 .carusel-doc .owl-nav .owl-next{
+        right: -30px;
+        bottom: 40%;
     }
     .section-5{
         padding: 40px 0 50px;
@@ -293,7 +297,13 @@
     .section-10 h2{
         text-align: center;
     }
+    .block-plan{
 
+        .wrapp-content{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
 }
 @media screen and (max-width: 880px){

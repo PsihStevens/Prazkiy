@@ -970,13 +970,13 @@ header,
                 width: 26px;
                 height: 26px;
                 right: -90px;
-                bottom: -110px;
+                bottom: 40px;
             }
             .owl-next{
                 width: 26px;
                 height: 26px;
                 right: -75px;
-                bottom: -200px;
+                bottom: 0;
             }
         }
     }
@@ -1297,6 +1297,19 @@ footer{
 
 /* section 12 end*/
 
+// plan section
+
+.block-plan{
+    width: 100%;
+
+    .wrapp-content{
+        display: flex;
+    }
+    .wrapp-sliders{
+        display: flex;
+    }
+}
+
 /* hidden block*/
 #call_success{
     width: 100%;
@@ -1472,8 +1485,6 @@ footer{
     align-items: center;
 }
 .noneScroll {
-    /* position:fixed; *//*позицианируем чтобы исчез скролл*//**/
-    /* width:100%; *//*что бы верстка не складывалась по ширине*//**/
     z-index: 1;
     overflow: hidden;
 }
