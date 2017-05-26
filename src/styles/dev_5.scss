@@ -430,6 +430,7 @@ header,
 .section-3{
     width: 100%;
     padding: 80px 0 1px;
+    box-shadow: 1px 8px 14px rgba(132, 127, 123, 0.35);
 
     .title-box{
         margin-bottom: 40px;
@@ -1301,12 +1302,158 @@ footer{
 
 .block-plan{
     width: 100%;
+    padding: 80px 0 60px;
 
+    .title{
+        color: #736852;
+        text-align: center;
+        margin-bottom: 30px;
+
+        h2{
+            font-family: 'Anglecia';
+            font-size: 48px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        
+    }
     .wrapp-content{
         display: flex;
+        height: 450px;
+        overflow: hidden;
+    }
+    .overall-plan{
+        width: 450px;
+        min-width: 450px;
+        // height: 365px;
+    }
+    .owl-nav div{
+        position: absolute;
+        background: none;
+        width: 26px;
+        height: 26px;
+        padding: 0;
+        /* top: 0; */
+        bottom: -50px;
+        margin: 0;
+        display: block;
+    }
+    .owl-nav .owl-next{
+        right: 35%;
+    }
+    .owl-nav .owl-prev{
+        left: 35%;
     }
     .wrapp-sliders{
         display: flex;
+        width: 100%;
+        max-width: 660px;
+        padding-left: 45px;
+    }
+    .name-sliders-tab{
+        width: 100%;
+        max-width: 200px;        
+    }
+    .name-tabs{
+        margin-bottom: 90px;
+    }
+    .title-tabs{
+        margin-bottom: 20px;
+
+        h3{
+            color: #736852;
+            font-size: 30px;
+            font-weight: 400;
+        }
+    }
+    .title-ares{
+        margin-bottom: 15px;
+    }
+    li{
+        color: #736852;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+    h4{
+        color: #736852;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .slide-ares{
+        width: 100%;
+        max-width: 100px;
+        height: 25px;
+
+        .area-text{
+            width: 100px;
+            padding-top: 5px;
+        }        
+        p{
+            color: #736852;
+            font-size: 23px;
+            font-weight: 400;
+        }
+        .item{
+            height: 25px;
+        }
+    }
+    .slide-plans{
+        width: 100%;
+        max-width: 460px;
+        padding-top: 50px;
+
+        .item{
+            max-height: 360px;            
+
+            .img-box{
+                height: 100%;
+                width: 460px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    width: auto;
+                }                
+            }
+        }
+    }
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 1px 1.7px 5px rgba(96, 55, 19, 0.35);
+        color: white;
+        font-size: 22px;
+        font-weight: 400;
+        width: 350px;
+        height: 40px;
+        margin-left: 50px;
+        background-color: #b08f6e;
+        border-radius: 3px;
+        transition: all 300ms ease;
+        box-shadow: 1px 1.7px 5px rgba(56, 28, 27, 0.35);
+
+        &:hover{
+            background-color: #735d47;
+        }
+    }
+
+    .rooms-1,
+    .plus-rooms-1,
+    .rooms-2,
+    .area-1-rooms,     
+    .area-1-plus-rooms,
+    .area-2-rooms{
+        display: none;
+    }
+    .active-tab-slide{
+        display: block;
+    }
+    .active-tab-name{
+        font-weight: 700;
     }
 }
 
@@ -1421,6 +1568,7 @@ footer{
     max-width: 1180px;
     max-height: 790px; /* Рaзмеры дoлжны быть фиксирoвaны */
     background: url('../images/popUp-news.jpg')top center no-repeat;
+    overflow: scroll;
     background-size: cover;
     position: relative;
     /* position: fixed; *//* чтoбы oкнo былo в видимoй зoне в любoм месте *//**/
@@ -1432,6 +1580,24 @@ footer{
     opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
     z-index: 1000; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
     padding: 50px;
+
+    .title{
+        margin-bottom: 30px;
+
+        h2{
+            color: #736852;
+            font-family: 'Anglecia';
+            font-size: 24px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }        
+    }
+    p{
+        color: #736852;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
 }
 /* Кнoпкa зaкрыть для тех ктo в тaнке) */
 .modal_div .modal_close {

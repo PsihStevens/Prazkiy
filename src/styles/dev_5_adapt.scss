@@ -60,6 +60,26 @@
     }
 
 }
+@media screen and (max-width: 1140px){
+
+    .block-plan .wrapp-content{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .block-plan .overall-plan{
+        margin-bottom: 50px;
+    }
+    .block-plan .wrapp-sliders{
+        max-width: 100%;
+        padding: 0;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    .block-plan a{
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width: 1080px){
 
 /* hesder*/
@@ -512,6 +532,25 @@
             font-size: 24px!important;
         }
     }
+    .block-plan .wrapp-sliders{
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-plan .name-sliders-tab{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-plan .name-tabs{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .block-plan ul{
+        display: flex;
+        justify-content: space-around;
+    }
 
 }
 @media screen and (max-width: 640px){
@@ -679,6 +718,28 @@
             }
         }
     }
+    .block-plan {
+        padding: 40px 0 60px;
+
+        .title h2{
+            font-size: 24px;
+        }
+        .overall-plan{
+            width: 100%;
+            min-width: 100%;
+            text-align: center;
+        }
+    }
+    .block-plan .slide-plans .item .img-box{
+        width: 100%;
+    }
+    .modal_div .title h2{
+        font-size: 18px;
+    }
+    .modal_div p{
+        font-size: 14px;
+        line-height: 20px;
+    }
 
 }
 @media screen and (max-width: 480px){
@@ -753,6 +814,26 @@
     }
     .section-12 li:before{
         left: -30px;
+    }
+    .block-plan .title-tabs h3{
+        font-size: 15px;
+    }
+    .block-plan li{
+        font-size: 12px;
+    }
+    .block-plan h4{
+        font-size: 15px;
+    }
+    .block-plan .slide-ares p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .block-plan .owl-nav div{
+        bottom: -40px;
+    }
+    .block-plan a{
+        font-size: 16px;
+        width: 100%;
     }
 }
 @media screen and (max-width: 320px){
