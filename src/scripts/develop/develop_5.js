@@ -1,6 +1,17 @@
 
 function owlCarousel() {
 
+
+
+    $("#carusel-small").on("click", ".owl-item", function(event) {
+
+        event.preventDefault();
+        $(".owl-item").removeClass("active-slide");
+        $(this).addClass("active-slide");
+        var number = $(this).index();
+        $('#carusel-full').trigger("to.owl.carousel", number);
+    });
+
     $('#1-rooms').on('click', '.owl-prev', function(event) {
         
         $('#area-1-rooms').trigger('prev.owl.carousel');

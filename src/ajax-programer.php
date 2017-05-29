@@ -1,13 +1,13 @@
 <?php
     $subject = 'Заявка с сайта';
-    $mess = '';
+    $mess = 'ЖК "Празький"';
     $mess .= '<hr>';
     if(isset($_POST['info'])) {
         $subject = $_POST['info'];
     }
     if(isset($_POST['contact_name'])) {
         $name = substr(htmlspecialchars(trim($_POST['contact_name'])), 0, 100);
-        $mess .= '<b>Имя:</b>' . $name . '<br>';
+        $mess .= "<b>Ім`я:</b>" . $name . '<br>';
     }
     if(isset($_POST['contact_tel'])) {
         $tel = substr(htmlspecialchars(trim($_POST['contact_tel'])), 0, 100);
@@ -22,7 +22,7 @@
     require 'class.phpmailer.php';
 
     $mail = new PHPMailer();
-    $mail->AddAddress('mail@mail.ru','');   // кому - адрес, Имя
+    $mail->AddAddress('herzz86@gmail.com','');   // кому - адрес, Имя
     $mail->IsHTML(true);                        // выставляем формат письма HTML
     $mail->Subject = $subject; // тема письма
     $mail->CharSet = "UTF-8";                   // кодировка
